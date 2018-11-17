@@ -1,0 +1,27 @@
+server:
+  port: 8000
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20Mb
+      max-request-size: 20Mb
+  datasource:
+    url: jdbc:mysql://192.168.241.131:3306/demo?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5

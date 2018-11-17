@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Test Thymeleaf!</h1>
+    Velocity:<p>$message</p>
+    Thymeleaf: <p th:text="${message}">Hello World!</p>
+    <a th:href="@{http://www.thymeleaf.org}">Thymeleaf</a>
+    <a th:href="@{/login}" th:unless="${session.user != null}">Login</a>
+</body>
+</html>
